@@ -16,8 +16,6 @@ O objetivo é centralizar tarefas rotineiras de Application Security:
 - relatórios CSV, JSON e Markdown;
 - modo interativo estilo ATM e modo pipeline.
 
-> Nome definido: `frauddefctl`, para evitar confusão com time de fraude e manter foco em Fraud Defense control.
-
 ---
 
 ## Status
