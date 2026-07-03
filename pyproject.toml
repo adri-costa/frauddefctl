@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "frauddefctl"
+version = "0.1.0"
+description = "Terminal administrativo para Google Cloud Fraud Defense / reCAPTCHA Enterprise"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Application Security" }
+]
+dependencies = [
+  "typer>=0.12.0",
+  "rich>=13.7.0",
+  "pydantic>=2.6.0",
+  "PyYAML>=6.0.1"
+]
+
+[project.optional-dependencies]
+gcp = [
+  "google-cloud-recaptcha-enterprise>=1.25.0",
+  "google-cloud-api-keys>=0.5.17",
+  "google-cloud-logging>=3.10.0",
+  "google-cloud-bigquery>=3.20.0",
+  "google-auth>=2.29.0"
+]
+dev = [
+  "pytest>=8.0.0",
+  "ruff>=0.4.0"
+]
+
+[project.scripts]
+frauddefctl = "frauddefctl.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["frauddefctl*"]
+
+[tool.ruff]
+line-length = 120
